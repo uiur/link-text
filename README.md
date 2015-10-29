@@ -17,7 +17,10 @@ npm install link-text
 ## Usage
 
 ```js
-var linkText = require('link-text')
+var link = require('link-text')
+
+link('foobar https://google.com')
+//=> 'foobar <a href="https://google.com">https://google.com</a>'
 ```
 
 ## License

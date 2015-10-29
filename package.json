@@ -1,5 +1,6 @@
 {
   "name": "link-text",
+  "description": "Autolink text",
   "version": "0.0.1",
   "author": "Kazato Sugimoto <uiureo@gmail.com>",
   "bugs": {
