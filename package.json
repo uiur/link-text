@@ -1,0 +1,29 @@
+{
+  "name": "link-text",
+  "version": "0.0.1",
+  "author": "Kazato Sugimoto <uiureo@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/uiureo/link-text/issues"
+  },
+  "devDependencies": {
+    "ava": "^0.3.0",
+    "standard": "*",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/uiureo/link-text",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uiureo/link-text.git"
+  },
+  "scripts": {
+    "test": "standard && ava"
+  },
+  "dependencies": {
+    "escape-html": "^1.0.3",
+    "linkify-it": "^1.2.0"
+  }
+}
