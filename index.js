@@ -17,7 +17,7 @@ function createLink (url, text, attrs) {
   return html.join('')
 }
 
-module.exports = function autolink (text, attrs) {
+module.exports = function (text, attrs) {
   attrs = attrs || {}
   text = escape(text)
 
