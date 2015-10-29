@@ -6,12 +6,11 @@ function createLink (url, text, attrs) {
 
   var html = []
   html.push('<a ')
-
+  html.push('href="' + url + '"')
   Object.keys(attrs).forEach(function (key) {
-    html.push(key + '="' + attrs[key] + '" ')
+    html.push(' ' + key + '="' + attrs[key] + '"')
   })
-
-  html.push('href="' + url + '">')
+  html.push('>')
   html.push(decodeURIComponent(text))
   html.push('</a>')
 

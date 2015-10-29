@@ -21,3 +21,12 @@ test('unicode', (t) => {
   t.ok(actual === 'god <a href="https://ja.wikipedia.org/wiki/%E7%A5%9E">https://ja.wikipedia.org/wiki/神</a>')
   t.end()
 })
+
+test('with attributes', (t) => {
+  const actual = link('foo http://twitter.com/ bar', {
+    target: '_blank'
+  })
+
+  t.ok(actual, 'foo <a href="https://twitter.com/" target="_blank">https://twitter.com/</a> bar')
+  t.end()
+})
