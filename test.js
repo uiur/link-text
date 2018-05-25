@@ -23,10 +23,16 @@ test('unicode', (t) => {
 })
 
 test('with attributes', (t) => {
-  const actual = link('foo http://twitter.com/ bar', {
+  const actual = link('foo https://twitter.com/ bar', {
     target: '_blank'
   })
 
-  t.ok(actual, 'foo <a href="https://twitter.com/" target="_blank">https://twitter.com/</a> bar')
+  t.ok(actual === 'foo <a href="https://twitter.com/" target="_blank">https://twitter.com/</a> bar')
+  t.end()
+})
+
+test('with uri encoded tags', (t) => {
+  const actual = link('http://hacktheplanet/?p=%3Ciframe%20src=%22/etc/passwd%22%3E%3C/iframe%3E%20PWONED')
+  t.ok(actual === '<a href=\"http://hacktheplanet/?p=%3Ciframe%20src=%22/etc/passwd%22%3E%3C/iframe%3E%20PWONED\">http://hacktheplanet/?p=&lt;iframe src=&quot;/etc/passwd&quot;&gt;&lt;/iframe&gt; PWONED</a>')
   t.end()
 })

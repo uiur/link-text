@@ -11,7 +11,7 @@ function createLink (url, text, attrs) {
     html.push(' ' + key + '="' + attrs[key] + '"')
   })
   html.push('>')
-  html.push(decodeURIComponent(text))
+  html.push(escape(decodeURIComponent(text)))
   html.push('</a>')
 
   return html.join('')
